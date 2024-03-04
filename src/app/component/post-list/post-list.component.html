@@ -1,0 +1,15 @@
+<div>
+    <h1>Blog programación</h1>
+    <a class="btn btn-dark" [routerLink]="['/createPost']">Crear post</a>
+</div>
+<section>
+    <div class="card" *ngFor="let post of blog">
+        <h3>{{ post.title }}</h3>
+        <p>{{post.text}}</p>
+        <div class="d-flex justify-content-between">
+            <a href="#" class="btn btn-success" [routerLink]="['/detailPost', post.id]">Más información</a>
+            <a class="btn btn-danger" (click)="handleClickBorrar(post.id)">Eliminar post</a>
+        </div>
+    </div>
+</section>
+

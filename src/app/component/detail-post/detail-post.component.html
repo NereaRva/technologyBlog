@@ -1,0 +1,9 @@
+<div>
+   <a class="btn btn-dark" [routerLink]="['/']">Inicio</a>
+</div>
+<div class="blogContent" *ngIf="blog">
+    <h2>{{blog.title}}</h2>
+    <p>{{blog.text}}</p>
+    <p>{{blog.author}}</p>
+    <p>{{blog.publishDate}}</p>
+</div>
